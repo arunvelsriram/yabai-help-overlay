@@ -6,7 +6,7 @@ const { existsSync } = require('fs')
 function createWindow() {
   const win = new BrowserWindow({
     frame: false,
-    width: 500,
+    width: 350,
     height: 500,
     transparent: true,
     backgroundColor: '#121212',
