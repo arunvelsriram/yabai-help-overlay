@@ -53,7 +53,7 @@
         const { ipcRenderer } = require('electron')
         const { data, error } = ipcRenderer.sendSync('help-data', '')
         if (error) {
-            console.error(error)
+            console.log(error)
             const $p = document.createElement('p')
             $p.textContent = "Failed to get help data"
             document.getElementById('errors')

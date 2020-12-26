@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron')
 const { ipcMain } = require('electron')
-const { spawnSync } = require('child_process');
+const { spawnSync } = require('child_process')
+const { existsSync } = require('fs')
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -32,14 +33,32 @@ app.on('activate', () => {
 })
 
 ipcMain.on('help-data', (event, arg) => {
-  const awkScript = 'extract-comments-from-skhdrc.awk'
+  const awkScript = `${__dirname}/extract-comments-from-skhdrc.awk`
+  console.log(`awk script: ${awkScript}`)
   const skhdConfig = `${app.getPath('home')}/.skhdrc`
+  console.log(`skhd config: ${skhdConfig}`)
+
+  if (!existsSync(awkScript)) {
+    const error = `file not found: ${awkScript}`
+    console.log(error)
+    event.returnValue = { error }
+    return
+  }
+
+  if (!existsSync(skhdConfig)) {
+    const error = `file not found: ${skhdConfig}`
+    console.log(error)
+    event.returnValue = { error }
+    return
+  }
+
   const result = spawnSync('awk', ['-f', awkScript, skhdConfig]);
   if (result.status > 0) {
-    console.error('Failed to parse skhd config file')
-    console.error(`status: ${result.status}`)
-    const error = String.fromCharCode.apply(String, result.stderr);
-    console.error(`stderr: ${error}`)
+    console.log('Failed to parse skhd config file')
+    console.log(`status: ${result.status}`)
+    const stderr = String.fromCharCode.apply(String, result.stderr);
+    console.log(`stderr: ${stderr}`)
+    const error = { awkScript, skhdConfig, result }
     event.returnValue = { error }
     return
   }
