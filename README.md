@@ -31,4 +31,27 @@ hyper - k : yabai -m window --focus north
 
 ## Install
 
-W.I.P
+1. Download the package and move the application to `/Applications`
+2. To open the help overlay using a keyboard shortcut add the below config to `~/.skhdrc`
+
+```
+# Launch : Help
+hyper - f1 : yabai -m rule --add app="^yabai-help-overlay$" sticky=on layer=above manage=off && open /Applications/yabai-help-overlay.app
+```
+
+`hyper + f1` shows the overlay
+
+## Development
+
+#### Run
+
+```
+npm install
+npm start
+```
+
+### Package
+
+```
+npm run make
+```
