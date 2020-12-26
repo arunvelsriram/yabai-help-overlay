@@ -1,7 +1,7 @@
 {
   "name": "yabai-help-overlay",
   "version": "1.0.0",
-  "description": "",
+  "description": "Help overlay for yabai, inspired by regolith-linux's help overlay.",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
