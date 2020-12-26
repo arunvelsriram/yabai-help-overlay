@@ -31,6 +31,8 @@ hyper - k : yabai -m window --focus north
 ...
 ```
 
+My [`.skhdrc`](https://github.com/arunvelsriram/dotfiles/blob/master/skhdrc) for reference.
+
 ## Install
 
 1. Download the package and move the application to `/Applications`
