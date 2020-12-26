@@ -2,6 +2,8 @@
 
 Help overlay for [yabai](https://github.com/koekeishiya/yabai) inspired by [regolith-linux](https://regolith-linux.org/)'s help overlay.
 
+![yabai-help-overlay screenshot](screenshot.png)
+
 ## How it works?
 
 The overlay (basically an electron window) is populated using comments provided in the [skhd](https://github.com/koekeishiya/skhd/) configuration `~/.skhdrc`.
