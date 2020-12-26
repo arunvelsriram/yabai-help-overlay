@@ -40,7 +40,7 @@ ipcMain.on('help-data', (event, arg) => {
     console.error(`status: ${result.status}`)
     const error = String.fromCharCode.apply(String, result.stderr);
     console.error(`stderr: ${error}`)
-    event.returnValue = { error: 'Failed to get help data' }
+    event.returnValue = { error }
     return
   }
   const stdoutStr = String.fromCharCode.apply(String, result.stdout);

@@ -55,9 +55,9 @@
         if (error) {
             console.error(error)
             const $p = document.createElement('p')
-            $p.textContent = error
+            $p.textContent = "Failed to get help data"
             document.getElementById('errors')
-                .appendChild(p)
+                .appendChild($p)
                 .setAttribute('class', 'shown')
         } else {
             const $overlay = document.getElementById('overlay')
