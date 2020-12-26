@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>yabai help</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="errors" class="hidden">
+        <!-- <p>Something went wrong</p> -->
+    </div>
+    <div id="overlay">
+        <!-- <details>
+            <summary>
+               <h2 class="summary-text">Launch</h2>
+            </summary>
+            <div class="shortcut">
+                <div class="shortcut-item description">Open Browser</div>
+                <div class="shortcut-item keys">⇧ ⌥ H</div>
+            </div>
+            <div class="shortcut">
+                <div class="shortcut-item description">Open something</div>
+                <div class="shortcut-item keys">✧ V</div>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h2 class="summary-text">Focus Window</h2>
+            </summary>
+            <div class="shortcut">
+                <div class="shortcut-item description">Focus top</div>
+                <div class="shortcut-item keys">⇧ ⌥ M</div>
+            </div>
+            <div class="shortcut">
+                <div class="shortcut-item description">Focus blah blah</div>
+                <div class="shortcut-item keys">⌃ ⌥ M</div>
+            </div>
+        </details> -->
+    </div>
+    <script>
+        const keyToSymbol = {
+            hyper: '✧',
+            shift: '⇧',
+            alt: '⌥',
+            cmd: '⌘',
+            ctrl: '⌃',
+            return: '⏎'
+        }
+        const { ipcRenderer } = require('electron')
+        const { data, error } = ipcRenderer.sendSync('help-data', '')
+        if (error) {
+            console.error(error)
+            const $p = document.createElement('p')
+            $p.textContent = error
+            document.getElementById('errors')
+                .appendChild(p)
+                .setAttribute('class', 'shown')
+        } else {
+            const $overlay = document.getElementById('overlay')
+            Object.keys(data).forEach(group => {
+                const $summary = document.createElement('summary')
+                const $h2 = document.createElement('h2')
+                $h2.setAttribute('class', 'summary-text')
+                $h2.textContent = group
+                $summary.appendChild($h2)
+
+                const $details = document.createElement('details')
+                $details.appendChild($summary)
+
+                data[group].forEach(({ description, keys }) => {
+                    const normalizedKeys = keys.reduce((accumulator, key) => {
+                        const symbol = keyToSymbol[key] || key
+                        accumulator.push(symbol.toUpperCase())
+                        return accumulator
+                    }, [])
+
+                    const $shortcut = document.createElement('div')
+                    $shortcut.setAttribute('class', 'shortcut')
+
+                    const $description = document.createElement('dive')
+                    $description.setAttribute('class', 'shortcut-item description')
+                    $description.textContent = description
+
+                    const $keys = document.createElement('div')
+                    $keys.setAttribute('class', 'shortcut-item keys')
+                    $keys.textContent = normalizedKeys.join(' ')
+
+                    $shortcut.appendChild($description)
+                    $shortcut.appendChild($keys)
+                    $details.appendChild($shortcut)
+                })
+                $overlay.appendChild($details)
+            })
+        }
+    </script>
+</body>
+
+</html>

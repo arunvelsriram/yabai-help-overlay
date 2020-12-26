@@ -1,0 +1,76 @@
+:root {
+    --p-white: #FAFAFA;
+    --p-red: #F44336;
+    --p-black: #121212;
+
+    --s-white: #EEEEEE;
+}
+
+html {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    cursor: default;
+}
+  
+input, textarea, select, button, img {
+    -webkit-user-drag: none;
+}
+
+.draggable {
+    -webkit-app-region: drag;
+}
+
+.selectable {
+    -webkit-user-select: auto;
+    cursor: auto;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--p-black);
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#errors {
+    margin: 5px;
+    color: var(--p-red);
+}
+
+#errors.hidden {
+    display: none;
+}
+
+#errors.hidden {
+    display: block;
+}
+
+summary {
+    color: var(--p-white);
+}
+
+.summary-text {
+    margin: 0;
+    display: inline-block;
+}
+
+.shortcut {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--s-white);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px 21px;
+}
+
+.shortcut * {
+    width: 100%;
+    flex: 1;
+}
+
+.shortcut-item.keys {
+    text-align: right;
+}
