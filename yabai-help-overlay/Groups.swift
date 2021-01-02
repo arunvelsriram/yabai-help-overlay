@@ -21,6 +21,24 @@ public class Group {
     }
 }
 
+@discardableResult func shell(_ command: String) -> (String?, Int32) {
+    print("command:", command)
+    let task = Process()
+
+    task.launchPath = "/bin/bash"
+    task.arguments = ["-c", command]
+
+    let pipe = Pipe()
+    task.standardOutput = pipe
+    task.standardError = pipe
+    task.launch()
+
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output = String(data: data, encoding: .utf8)
+    task.waitUntilExit()
+    return (output, task.terminationStatus)
+}
+
 func loadHelpData() -> [Group] {
     struct HelpDataItem: Decodable {
         let group: String
@@ -28,40 +46,23 @@ func loadHelpData() -> [Group] {
         let keyCombination: String
     }
     
-    let jsonData = """
-        [
-          {
-            "group": "Launch",
-            "description": "Terminal",
-            "keyCombination": "hyper + return"
-          },
-          {
-            "group": "Launch",
-            "description": "Browser",
-            "keyCombination": "hyper + b"
-          },
-          {
-            "group": "Launch",
-            "description": "Browser",
-            "keyCombination": "hyper + b"
-          },
-          {
-            "group": "Launch",
-            "description": "Browser",
-            "keyCombination": "hyper + b"
-          },
-          {
-            "group": "Focus",
-            "description": "Browser",
-            "keyCombination": "hyper + b"
-          },
-          {
-            "group": "Focus",
-            "description": "Browser",
-            "keyCombination": "hyper + b"
-          }
-        ]
-    """.data(using: .utf8)!
+    guard let awkScript = Bundle.main.path(forResource: "extract-help-data", ofType: "awk") else { return [] }
+    print("using awk script:", awkScript)
+
+    let skhdConfig: String = "/Users/arunvelsriram/.skhdrc"
+    if (!FileManager.default.fileExists(atPath: skhdConfig)) {
+        print("skhd config \(skhdConfig) not found")
+        return []
+    }
+    print("using skhd config:", skhdConfig)
+
+    let (output, awkExitStatus) = shell("awk -f '\(awkScript)' '\(skhdConfig)'")
+    print("awk exit status:", awkExitStatus)
+    if awkExitStatus > 0 { return [] }
+    guard let awkOutput = output else { print("awk output is nil"); return [] }
+    print("awk output:", awkOutput)
+
+    guard let jsonData = awkOutput.data(using: .utf8) else { return [] }
     let helpDataItems = try! JSONDecoder().decode([HelpDataItem].self, from: jsonData)
     
     var groups: [Group] = []
