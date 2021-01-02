@@ -77,7 +77,7 @@ extension ViewController: NSOutlineViewDelegate {
             guard let cell = outlineView.makeView(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView else { return nil }
             
             if let shortcut = item as? Shortcut {
-                cell.textField?.stringValue = shortcut.keyCombination
+                cell.textField?.stringValue = shortcut.prettyKeyCombination()
             }
             
             return cell

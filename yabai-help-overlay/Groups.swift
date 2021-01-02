@@ -8,6 +8,31 @@ public class Shortcut {
         self.description = description
         self.keyCombination = keyCombination
     }
+    
+    func getSymbol(forKey key: String) -> String? {
+        return [
+            "hyper": "✧",
+            "shift": "⇧",
+            "alt": "⌥",
+            "cmd": "⌘",
+            "ctrl": "⌃",
+            "return": "⏎"
+        ][key]
+    }
+    
+    func prettyKeyCombination() -> String {
+        let keys = self.keyCombination.split(separator: "+")
+        var prettyKeys: [String] = []
+        for key in keys {
+            let keyStr = String(key).trimmingCharacters(in: .whitespaces)
+            if let symbol = getSymbol(forKey: keyStr) {
+                prettyKeys.append(symbol)
+            } else{
+                prettyKeys.append(keyStr.uppercased())
+            }
+        }
+        return prettyKeys.joined(separator: "  ")
+    }
 }
 
 public class Group {
