@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B1B4016259E478400DDF525 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B4015259E478400DDF525 /* Groups.swift */; };
+		6BA24C65259F202C000B5497 /* extract-help-data.awk in Resources */ = {isa = PBXBuildFile; fileRef = 6BA24C64259F202C000B5497 /* extract-help-data.awk */; };
+		6BC28B31259E3100009112E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC28B30259E3100009112E5 /* AppDelegate.swift */; };
+		6BC28B33259E3100009112E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC28B32259E3100009112E5 /* ViewController.swift */; };
+		6BC28B35259E3101009112E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC28B34259E3101009112E5 /* Assets.xcassets */; };
+		6BC28B38259E3101009112E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC28B36259E3101009112E5 /* Main.storyboard */; };
+		6BC28B44259E3101009112E5 /* yabai_help_overlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC28B43259E3101009112E5 /* yabai_help_overlayTests.swift */; };
+		6BC28B4F259E3101009112E5 /* yabai_help_overlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC28B4E259E3101009112E5 /* yabai_help_overlayUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BC28B40259E3101009112E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC28B25259E3100009112E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BC28B2C259E3100009112E5;
+			remoteInfo = "yabai-help-overlay";
+		};
+		6BC28B4B259E3101009112E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC28B25259E3100009112E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BC28B2C259E3100009112E5;
+			remoteInfo = "yabai-help-overlay";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B1B4015259E478400DDF525 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		6BA24C64259F202C000B5497 /* extract-help-data.awk */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 1; path = "extract-help-data.awk"; sourceTree = "<group>"; };
+		6BC28B2D259E3100009112E5 /* yabai-help-overlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yabai-help-overlay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC28B30259E3100009112E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6BC28B32259E3100009112E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BC28B34259E3101009112E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BC28B37259E3101009112E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BC28B39259E3101009112E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BC28B3A259E3101009112E5 /* yabai_help_overlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yabai_help_overlay.entitlements; sourceTree = "<group>"; };
+		6BC28B3F259E3101009112E5 /* yabai-help-overlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yabai-help-overlayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC28B43259E3101009112E5 /* yabai_help_overlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yabai_help_overlayTests.swift; sourceTree = "<group>"; };
+		6BC28B45259E3101009112E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BC28B4A259E3101009112E5 /* yabai-help-overlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yabai-help-overlayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC28B4E259E3101009112E5 /* yabai_help_overlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yabai_help_overlayUITests.swift; sourceTree = "<group>"; };
+		6BC28B50259E3101009112E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BC28B2A259E3100009112E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC28B3C259E3101009112E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC28B47259E3101009112E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BC28B24259E3100009112E5 = {
+			isa = PBXGroup;
+			children = (
+				6BC28B2F259E3100009112E5 /* yabai-help-overlay */,
+				6BC28B42259E3101009112E5 /* yabai-help-overlayTests */,
+				6BC28B4D259E3101009112E5 /* yabai-help-overlayUITests */,
+				6BC28B2E259E3100009112E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BC28B2E259E3100009112E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BC28B2D259E3100009112E5 /* yabai-help-overlay.app */,
+				6BC28B3F259E3101009112E5 /* yabai-help-overlayTests.xctest */,
+				6BC28B4A259E3101009112E5 /* yabai-help-overlayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BC28B2F259E3100009112E5 /* yabai-help-overlay */ = {
+			isa = PBXGroup;
+			children = (
+				6BC28B30259E3100009112E5 /* AppDelegate.swift */,
+				6BC28B32259E3100009112E5 /* ViewController.swift */,
+				6BC28B34259E3101009112E5 /* Assets.xcassets */,
+				6BC28B36259E3101009112E5 /* Main.storyboard */,
+				6BC28B39259E3101009112E5 /* Info.plist */,
+				6BC28B3A259E3101009112E5 /* yabai_help_overlay.entitlements */,
+				6B1B4015259E478400DDF525 /* Groups.swift */,
+				6BA24C64259F202C000B5497 /* extract-help-data.awk */,
+			);
+			path = "yabai-help-overlay";
+			sourceTree = "<group>";
+		};
+		6BC28B42259E3101009112E5 /* yabai-help-overlayTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BC28B43259E3101009112E5 /* yabai_help_overlayTests.swift */,
+				6BC28B45259E3101009112E5 /* Info.plist */,
+			);
+			path = "yabai-help-overlayTests";
+			sourceTree = "<group>";
+		};
+		6BC28B4D259E3101009112E5 /* yabai-help-overlayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6BC28B4E259E3101009112E5 /* yabai_help_overlayUITests.swift */,
+				6BC28B50259E3101009112E5 /* Info.plist */,
+			);
+			path = "yabai-help-overlayUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BC28B2C259E3100009112E5 /* yabai-help-overlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC28B53259E3101009112E5 /* Build configuration list for PBXNativeTarget "yabai-help-overlay" */;
+			buildPhases = (
+				6BC28B29259E3100009112E5 /* Sources */,
+				6BC28B2A259E3100009112E5 /* Frameworks */,
+				6BC28B2B259E3100009112E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "yabai-help-overlay";
+			productName = "yabai-help-overlay";
+			productReference = 6BC28B2D259E3100009112E5 /* yabai-help-overlay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BC28B3E259E3101009112E5 /* yabai-help-overlayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC28B56259E3101009112E5 /* Build configuration list for PBXNativeTarget "yabai-help-overlayTests" */;
+			buildPhases = (
+				6BC28B3B259E3101009112E5 /* Sources */,
+				6BC28B3C259E3101009112E5 /* Frameworks */,
+				6BC28B3D259E3101009112E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BC28B41259E3101009112E5 /* PBXTargetDependency */,
+			);
+			name = "yabai-help-overlayTests";
+			productName = "yabai-help-overlayTests";
+			productReference = 6BC28B3F259E3101009112E5 /* yabai-help-overlayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6BC28B49259E3101009112E5 /* yabai-help-overlayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC28B59259E3101009112E5 /* Build configuration list for PBXNativeTarget "yabai-help-overlayUITests" */;
+			buildPhases = (
+				6BC28B46259E3101009112E5 /* Sources */,
+				6BC28B47259E3101009112E5 /* Frameworks */,
+				6BC28B48259E3101009112E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BC28B4C259E3101009112E5 /* PBXTargetDependency */,
+			);
+			name = "yabai-help-overlayUITests";
+			productName = "yabai-help-overlayUITests";
+			productReference = 6BC28B4A259E3101009112E5 /* yabai-help-overlayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BC28B25259E3100009112E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					6BC28B2C259E3100009112E5 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					6BC28B3E259E3101009112E5 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 6BC28B2C259E3100009112E5;
+					};
+					6BC28B49259E3101009112E5 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 6BC28B2C259E3100009112E5;
+					};
+				};
+			};
+			buildConfigurationList = 6BC28B28259E3100009112E5 /* Build configuration list for PBXProject "yabai-help-overlay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BC28B24259E3100009112E5;
+			productRefGroup = 6BC28B2E259E3100009112E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BC28B2C259E3100009112E5 /* yabai-help-overlay */,
+				6BC28B3E259E3101009112E5 /* yabai-help-overlayTests */,
+				6BC28B49259E3101009112E5 /* yabai-help-overlayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BC28B2B259E3100009112E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC28B35259E3101009112E5 /* Assets.xcassets in Resources */,
+				6BA24C65259F202C000B5497 /* extract-help-data.awk in Resources */,
+				6BC28B38259E3101009112E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC28B3D259E3101009112E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC28B48259E3101009112E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BC28B29259E3100009112E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC28B33259E3100009112E5 /* ViewController.swift in Sources */,
+				6BC28B31259E3100009112E5 /* AppDelegate.swift in Sources */,
+				6B1B4016259E478400DDF525 /* Groups.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC28B3B259E3101009112E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC28B44259E3101009112E5 /* yabai_help_overlayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC28B46259E3101009112E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC28B4F259E3101009112E5 /* yabai_help_overlayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BC28B41259E3101009112E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BC28B2C259E3100009112E5 /* yabai-help-overlay */;
+			targetProxy = 6BC28B40259E3101009112E5 /* PBXContainerItemProxy */;
+		};
+		6BC28B4C259E3101009112E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BC28B2C259E3100009112E5 /* yabai-help-overlay */;
+			targetProxy = 6BC28B4B259E3101009112E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BC28B36259E3101009112E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BC28B37259E3101009112E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BC28B51259E3101009112E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6BC28B52259E3101009112E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6BC28B54259E3101009112E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "yabai-help-overlay/yabai_help_overlay.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "yabai-help-overlay/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.arunvelsriram.yabai-help-overlay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6BC28B55259E3101009112E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "yabai-help-overlay/yabai_help_overlay.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "yabai-help-overlay/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.arunvelsriram.yabai-help-overlay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6BC28B57259E3101009112E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "yabai-help-overlayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.arunvelsriram.yabai-help-overlayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yabai-help-overlay.app/Contents/MacOS/yabai-help-overlay";
+			};
+			name = Debug;
+		};
+		6BC28B58259E3101009112E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "yabai-help-overlayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.arunvelsriram.yabai-help-overlayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yabai-help-overlay.app/Contents/MacOS/yabai-help-overlay";
+			};
+			name = Release;
+		};
+		6BC28B5A259E3101009112E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "yabai-help-overlayUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.arunvelsriram.yabai-help-overlayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "yabai-help-overlay";
+			};
+			name = Debug;
+		};
+		6BC28B5B259E3101009112E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "yabai-help-overlayUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.arunvelsriram.yabai-help-overlayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "yabai-help-overlay";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BC28B28259E3100009112E5 /* Build configuration list for PBXProject "yabai-help-overlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC28B51259E3101009112E5 /* Debug */,
+				6BC28B52259E3101009112E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC28B53259E3101009112E5 /* Build configuration list for PBXNativeTarget "yabai-help-overlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC28B54259E3101009112E5 /* Debug */,
+				6BC28B55259E3101009112E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC28B56259E3101009112E5 /* Build configuration list for PBXNativeTarget "yabai-help-overlayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC28B57259E3101009112E5 /* Debug */,
+				6BC28B58259E3101009112E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC28B59259E3101009112E5 /* Build configuration list for PBXNativeTarget "yabai-help-overlayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC28B5A259E3101009112E5 /* Debug */,
+				6BC28B5B259E3101009112E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BC28B25259E3100009112E5 /* Project object */;
+}
