@@ -50,7 +50,7 @@
                     <window key="window" title="yabai-help-overlay" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
-                        <rect key="contentRect" x="585" y="381" width="400" height="600"/>
+                        <rect key="contentRect" x="585" y="381" width="400" height="400"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -68,13 +68,14 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="yabai_help_overlay" customModuleProvider="target" sceneMemberID="viewController">
-                    <scrollView key="view" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLk-Y4-fK4">
+                    <scrollView key="view" autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLk-Y4-fK4">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
-                        <clipView key="contentView" ambiguous="YES" id="BH5-gn-DlL">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <clipView key="contentView" id="BH5-gn-DlL">
                             <rect key="frame" x="1" y="1" width="498" height="598"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <outlineView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="4" outlineTableColumn="tfA-vj-f2k" id="hIG-k0-bFD">
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="4" outlineTableColumn="tfA-vj-f2k" id="hIG-k0-bFD">
                                     <rect key="frame" x="0.0" y="0.0" width="498" height="598"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -93,14 +94,12 @@
                                             </textFieldCell>
                                             <prototypeCellViews>
                                                 <tableCellView identifier="DescriptionCellID" id="oaP-0w-vIi">
-                                                    <rect key="frame" x="1" y="1" width="300" height="17"/>
+                                                    <rect key="frame" x="1" y="1" width="300" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-Ch-jCR">
-                                                            <rect key="frame" x="0.0" y="1" width="300" height="16"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="HA9-CP-Gq8"/>
-                                                            </constraints>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-Ch-jCR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="ykU-Tb-FXB">
                                                                 <font key="font" metaFont="system" size="15"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -126,14 +125,12 @@
                                             </textFieldCell>
                                             <prototypeCellViews>
                                                 <tableCellView identifier="KeyCombinationCellID" id="adI-dw-tJI">
-                                                    <rect key="frame" x="304" y="1" width="100" height="17"/>
+                                                    <rect key="frame" x="304" y="1" width="100" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDv-40-QOX">
-                                                            <rect key="frame" x="0.0" y="1" width="100" height="16"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="QPH-jx-GfL"/>
-                                                            </constraints>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDv-40-QOX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="Poe-vw-ZSl">
                                                                 <font key="font" metaFont="system" size="15"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -151,10 +148,6 @@
                                 </outlineView>
                             </subviews>
                         </clipView>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="400" id="2vc-QZ-P0E"/>
-                            <constraint firstAttribute="height" constant="500" id="5rm-we-RKF"/>
-                        </constraints>
                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="DFq-GF-iDG">
                             <rect key="frame" x="1" y="583" width="498" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
