@@ -22,7 +22,7 @@ public class Group {
 }
 
 @discardableResult func shell(_ command: String) -> (String?, Int32) {
-    print("command:", command)
+    print("Command:", command)
     let task = Process()
 
     task.launchPath = "/bin/bash"
@@ -47,14 +47,15 @@ func loadHelpData() -> [Group] {
     }
     
     guard let awkScript = Bundle.main.path(forResource: "extract-help-data", ofType: "awk") else { return [] }
-    print("using awk script:", awkScript)
+    print("Using awk script:", awkScript)
 
-    let skhdConfig: String = "/Users/arunvelsriram/.skhdrc"
+    let homeDir = FileManager.default.homeDirectoryForCurrentUser.path
+    let skhdConfig: String = "\(homeDir)/.skhdrc"
     if (!FileManager.default.fileExists(atPath: skhdConfig)) {
         print("skhd config \(skhdConfig) not found")
         return []
     }
-    print("using skhd config:", skhdConfig)
+    print("Using skhd config:", skhdConfig)
 
     let (output, awkExitStatus) = shell("awk -f '\(awkScript)' '\(skhdConfig)'")
     print("awk exit status:", awkExitStatus)
